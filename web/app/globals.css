@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+[data-theme="dark"] {
+  --ink: #e8eaf2;
+  --haze: #a7aec4;
+  --dust: #6f7690;
+  --accent: #8b7cf6;
+  --seam: #232842;
+  --raise: #0d1122;
+  --sunk: #080b16;
+  --page: #05070d;
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --ink: #141829;
+  --haze: #4b5370;
+  --dust: #6b7194;
+  --accent: #5b4ef0;
+  --seam: #e2e5f2;
+  --raise: #ffffff;
+  --sunk: #eef0f7;
+  --page: #f6f7fb;
+  color-scheme: light;
+}
+
+body {
+  background: var(--page);
+  color: var(--ink);
+}
+
+/* Layout + component tokens used by the Launchpad pages. */
+.section {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 640px) {
+  .section {
+    padding-inline: 2rem;
+  }
+}
+.page-top {
+  padding-top: 4rem;
+}
+.chip {
+  display: inline-block;
+  border: 1px solid var(--seam);
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--haze);
+}
+.measure {
+  max-width: 44rem;
+}
+.text-display-lg {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+}
+.text-display-md {
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+}
+.text-body-lg {
+  font-size: 1.075rem;
+  line-height: 1.65;
+}
+.label {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dust);
+}
+.rounded-panel {
+  border-radius: 1rem;
+}
+.rounded-tile {
+  border-radius: 0.6rem;
+}
+.rounded-inline {
+  border-radius: 0.35rem;
+}
+.tap {
+  min-height: 44px;
+  min-width: 44px;
+}
